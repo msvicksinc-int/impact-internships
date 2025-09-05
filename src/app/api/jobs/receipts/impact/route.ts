@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { supabase } from "@/lib/supabaseClient";
 
 // GET transparency data (total money raised)
-export async function GET((req: Request)) {
+export async function GET(req: Request) {
   const { data, error } = await supabase
     .from("receipts")
     .select("amount");
